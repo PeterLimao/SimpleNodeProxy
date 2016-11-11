@@ -1,8 +1,9 @@
 var HttpServer = require('./src/httpServer');
 
 var PORT = 8000;
-var TARGET = 'http://test01.gitstars.cn';
+var TARGET = process.argv[2];
 
 HttpServer.start(PORT, TARGET, function () {
-    console.log('现在代理服务正运行在' + PORT + '端口...');
+    console.log('Listening on ' + PORT + ' port...');
+    console.log('Proxying host is: ' + TARGET);
 });

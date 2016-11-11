@@ -10,8 +10,8 @@ var proxyTarget = '';
 var server = Http.createServer(function (req, res) {
     var url = Url.parse(req.url);
 
-    if (url.pathname.indexOf('/api') > 0) {
-        proxy.start(proxyTarget, req, res);
+    if (url.pathname.indexOf('api') > 0) {
+        Proxy.start(proxyTarget, req, res);
     } else {
         getFile(url, req, res);
     }

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>GitStars</title>
+<link href="style/vendor.4aedfdb.css" rel="stylesheet"></head>
+<body :style="style">
+    <loading v-if="isLoading"></loading>
+    <readme :owner="owner" :repo="repo" use-type="api" v-if="isReadme"></readme>
+    <file-panel-file v-else></file-panel-file>
+    <file-panel-pic v-if="isPic" :pic-src="picSrc"></file-panel-pic>
+    <not-found v-if="isNotFound" :type="notFoundType"></not-found>
+<script type="text/javascript" src="js/vendor.4aedfdb.js"></script><script type="text/javascript" src="js/fileContent.4aedfdb.js"></script></body>
+</html>
